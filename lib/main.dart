@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'BMI Calculator',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -284,12 +285,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   _bmi = (_weight / (heightinm * heightinm));
                 });
               },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFEB1555),
+              ),
               child: const Text(
                 "CALCULATE YOUR BMI",
                 style: TextStyle(fontSize: 18, letterSpacing: 1.5),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: const Color(0xFFEB1555),
               ),
             ),
           ),
